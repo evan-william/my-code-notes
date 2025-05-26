@@ -1,0 +1,70 @@
+<!--
+{{ ... }} → Expression Syntax
+
+{{ ... }} is used to output variables or expressions into the HTML template.
+It is used for displaying data dynamically in the template.
+
+Examples:
+Displaying a Variable
+
+1. <p>Hello, {{ username }}!</p>
+If username = "Evan", the output will be:
+
+<p>Hello, Evan!</p>
+
+2. Evaluating an Expression
+<p>2 + 2 = {{ 2 + 2 }}</p>
+This will output:
+
+<p>2 + 2 = 4</p>
+
+3. Calling a Function
+<p>Current year: {{ get_current_year() }}</p>
+If get_current_year() is a Python function that returns 2025, the output will be:
+
+<p>Current year: 2025</p>
+-->
+
+<!--
+{% ... %} → Control Structures
+
+{% ... %} is used for logic and control flow statements, such as loops and conditionals.
+It does not output anything directly but controls how the template is rendered.
+
+Examples:
+1. For Loop
+<ul>
+    {% for item in items %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+If items = ["Apple", "Banana", "Cherry"], the output will be:
+
+<ul>
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Cherry</li>
+</ul>
+
+
+2. If Statement
+{% if user.is_admin %}
+    <p>Welcome, Admin!</p>
+{% else %}
+    <p>Welcome, User!</p>
+{% endif %}
+
+If user.is_admin = True, the output will be:
+<p>Welcome, Admin!</p>
+
+If user.is_admin = False, the output will be:
+<p>Welcome, User!</p>
+
+3. Extending Templates
+{% extends "base.html" %}
+This tells Jinja2 to inherit from base.html.
+
+Defining Blocks
+{% block title %} My Page {% endblock %}
+Used for template inheritance to allow child templates to override sections.
+-->

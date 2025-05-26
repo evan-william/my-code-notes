@@ -1,0 +1,21 @@
+import Flask =	Initializes the Flask app (app = Flask(__name__))
+import render_template	= Loads HTML templates (return render_template('index.html'))
+import request =	Handles form data and query parameters (request.form.get('name'))
+import redirect	= Redirects users to another page (return redirect('/home'))
+import url_for	= Generates URLs dynamically (url_for('home'))
+
+FULL IMPORT EXAMPLE:
+from flask import Flask, render_template, request, redirect, url_for
+app = Flask(__name__)
+
+
+@app.route() is a decorator in Flask. It tells Flask which URL should trigger a specific function.
+
+In this case:
+@app.route("/", methods=["GET", "POST"])
+
+
+"/" → Means this function runs when someone visits the homepage (http://localhost:5000/).
+methods=["GET", "POST"] → Specifies that this route supports both GET and POST requests.
+
+Link: https://chatgpt.com/share/67e98577-2c04-800d-8b71-ac542d539236
